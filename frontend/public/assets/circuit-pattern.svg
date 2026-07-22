@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="circuit" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#f0a500" stroke-opacity="0.08" stroke-width="0.8">
+        <path d="M 0 40 L 30 40 L 40 30 L 40 0"/>
+        <path d="M 40 80 L 40 50 L 50 40 L 80 40"/>
+        <circle cx="40" cy="40" r="2.2" fill="#f0a500" fill-opacity="0.18" stroke="none"/>
+        <circle cx="0" cy="40" r="1.2" fill="#f0a500" fill-opacity="0.12" stroke="none"/>
+        <circle cx="40" cy="0" r="1.2" fill="#f0a500" fill-opacity="0.12" stroke="none"/>
+        <circle cx="80" cy="40" r="1.2" fill="#f0a500" fill-opacity="0.12" stroke="none"/>
+        <circle cx="40" cy="80" r="1.2" fill="#f0a500" fill-opacity="0.12" stroke="none"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#circuit)"/>
+</svg>

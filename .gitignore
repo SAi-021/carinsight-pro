@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pyc
+node_modules/
+.env
+build/
+models/all_models.pkl
+models/test_split.pkl

@@ -1,0 +1,507 @@
+{
+  "best_model_name": "Gradient Boosting",
+  "feature_cols": [
+    "km_driven",
+    "owner",
+    "brand",
+    "seller_type",
+    "car_age",
+    "km_per_year",
+    "brand_value_score",
+    "model_price_score",
+    "fuel_diesel",
+    "fuel_electric",
+    "fuel_lpg",
+    "fuel_petrol",
+    "transmission_manual"
+  ],
+  "tier_labels": [
+    "Budget (<5L)",
+    "Mid (5-10L)",
+    "Premium (10-20L)",
+    "Luxury (20-50L)",
+    "Ultra (>50L)"
+  ],
+  "tier_edges": [
+    0,
+    500000,
+    1000000,
+    2000000,
+    5000000,
+    null
+  ],
+  "results": {
+    "Linear Regression": {
+      "MAE": 341928.31,
+      "MSE": 347939038525.38,
+      "RMSE": 589863.58,
+      "R2": 0.8131,
+      "R2_train": 0.7986,
+      "MAPE": 45.82,
+      "CV_R2_mean": 0.7938,
+      "CV_R2_std": 0.0195,
+      "accuracy": 0.6856,
+      "precision": 0.6634,
+      "recall": 0.6239,
+      "f1": 0.6221,
+      "confusion_matrix": [
+        [
+          819,
+          303,
+          24,
+          0,
+          0
+        ],
+        [
+          45,
+          323,
+          138,
+          1,
+          0
+        ],
+        [
+          2,
+          19,
+          150,
+          200,
+          1
+        ],
+        [
+          2,
+          0,
+          18,
+          412,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          34,
+          25
+        ]
+      ],
+      "per_class": {
+        "Budget (<5L)": {
+          "precision": 0.9435,
+          "recall": 0.7147,
+          "f1": 0.8133,
+          "support": 1146
+        },
+        "Mid (5-10L)": {
+          "precision": 0.5008,
+          "recall": 0.6371,
+          "f1": 0.5608,
+          "support": 507
+        },
+        "Premium (10-20L)": {
+          "precision": 0.4545,
+          "recall": 0.4032,
+          "f1": 0.4274,
+          "support": 372
+        },
+        "Luxury (20-50L)": {
+          "precision": 0.6368,
+          "recall": 0.9406,
+          "f1": 0.7594,
+          "support": 438
+        },
+        "Ultra (>50L)": {
+          "precision": 0.7812,
+          "recall": 0.4237,
+          "f1": 0.5495,
+          "support": 59
+        }
+      },
+      "overfit_gap": -0.0145,
+      "is_overfitting": false,
+      "is_underfitting": false,
+      "tier_labels": [
+        "Budget (<5L)",
+        "Mid (5-10L)",
+        "Premium (10-20L)",
+        "Luxury (20-50L)",
+        "Ultra (>50L)"
+      ]
+    },
+    "Random Forest": {
+      "MAE": 180203.27,
+      "MSE": 124638907313.4,
+      "RMSE": 353042.36,
+      "R2": 0.933,
+      "R2_train": 0.9913,
+      "MAPE": 18.65,
+      "CV_R2_mean": 0.9362,
+      "CV_R2_std": 0.007,
+      "accuracy": 0.8386,
+      "precision": 0.8043,
+      "recall": 0.7679,
+      "f1": 0.7798,
+      "confusion_matrix": [
+        [
+          1049,
+          96,
+          1,
+          0,
+          0
+        ],
+        [
+          59,
+          415,
+          33,
+          0,
+          0
+        ],
+        [
+          0,
+          36,
+          225,
+          111,
+          0
+        ],
+        [
+          0,
+          1,
+          39,
+          390,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          23,
+          36
+        ]
+      ],
+      "per_class": {
+        "Budget (<5L)": {
+          "precision": 0.9468,
+          "recall": 0.9154,
+          "f1": 0.9308,
+          "support": 1146
+        },
+        "Mid (5-10L)": {
+          "precision": 0.7573,
+          "recall": 0.8185,
+          "f1": 0.7867,
+          "support": 507
+        },
+        "Premium (10-20L)": {
+          "precision": 0.755,
+          "recall": 0.6048,
+          "f1": 0.6716,
+          "support": 372
+        },
+        "Luxury (20-50L)": {
+          "precision": 0.7443,
+          "recall": 0.8904,
+          "f1": 0.8108,
+          "support": 438
+        },
+        "Ultra (>50L)": {
+          "precision": 0.8182,
+          "recall": 0.6102,
+          "f1": 0.699,
+          "support": 59
+        }
+      },
+      "overfit_gap": 0.0583,
+      "is_overfitting": false,
+      "is_underfitting": false,
+      "tier_labels": [
+        "Budget (<5L)",
+        "Mid (5-10L)",
+        "Premium (10-20L)",
+        "Luxury (20-50L)",
+        "Ultra (>50L)"
+      ]
+    },
+    "Gradient Boosting": {
+      "MAE": 174556.24,
+      "MSE": 113189961666.71,
+      "RMSE": 336437.16,
+      "R2": 0.9392,
+      "R2_train": 0.9916,
+      "MAPE": 18.52,
+      "CV_R2_mean": 0.9415,
+      "CV_R2_std": 0.0057,
+      "accuracy": 0.8533,
+      "precision": 0.822,
+      "recall": 0.8047,
+      "f1": 0.8117,
+      "confusion_matrix": [
+        [
+          1062,
+          84,
+          0,
+          0,
+          0
+        ],
+        [
+          77,
+          408,
+          22,
+          0,
+          0
+        ],
+        [
+          0,
+          35,
+          257,
+          80,
+          0
+        ],
+        [
+          0,
+          2,
+          44,
+          382,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          16,
+          43
+        ]
+      ],
+      "per_class": {
+        "Budget (<5L)": {
+          "precision": 0.9324,
+          "recall": 0.9267,
+          "f1": 0.9295,
+          "support": 1146
+        },
+        "Mid (5-10L)": {
+          "precision": 0.7713,
+          "recall": 0.8047,
+          "f1": 0.7876,
+          "support": 507
+        },
+        "Premium (10-20L)": {
+          "precision": 0.7957,
+          "recall": 0.6909,
+          "f1": 0.7396,
+          "support": 372
+        },
+        "Luxury (20-50L)": {
+          "precision": 0.7992,
+          "recall": 0.8721,
+          "f1": 0.8341,
+          "support": 438
+        },
+        "Ultra (>50L)": {
+          "precision": 0.8113,
+          "recall": 0.7288,
+          "f1": 0.7679,
+          "support": 59
+        }
+      },
+      "overfit_gap": 0.0524,
+      "is_overfitting": false,
+      "is_underfitting": false,
+      "tier_labels": [
+        "Budget (<5L)",
+        "Mid (5-10L)",
+        "Premium (10-20L)",
+        "Luxury (20-50L)",
+        "Ultra (>50L)"
+      ]
+    },
+    "XGBoost": {
+      "MAE": 175668.2,
+      "MSE": 113900802791.71,
+      "RMSE": 337491.93,
+      "R2": 0.9388,
+      "R2_train": 0.9895,
+      "MAPE": 18.59,
+      "CV_R2_mean": 0.9411,
+      "CV_R2_std": 0.006,
+      "accuracy": 0.8549,
+      "precision": 0.8253,
+      "recall": 0.8076,
+      "f1": 0.8147,
+      "confusion_matrix": [
+        [
+          1057,
+          88,
+          1,
+          0,
+          0
+        ],
+        [
+          69,
+          414,
+          24,
+          0,
+          0
+        ],
+        [
+          0,
+          37,
+          258,
+          77,
+          0
+        ],
+        [
+          0,
+          1,
+          44,
+          384,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          16,
+          43
+        ]
+      ],
+      "per_class": {
+        "Budget (<5L)": {
+          "precision": 0.9387,
+          "recall": 0.9223,
+          "f1": 0.9305,
+          "support": 1146
+        },
+        "Mid (5-10L)": {
+          "precision": 0.7667,
+          "recall": 0.8166,
+          "f1": 0.7908,
+          "support": 507
+        },
+        "Premium (10-20L)": {
+          "precision": 0.789,
+          "recall": 0.6935,
+          "f1": 0.7382,
+          "support": 372
+        },
+        "Luxury (20-50L)": {
+          "precision": 0.805,
+          "recall": 0.8767,
+          "f1": 0.8393,
+          "support": 438
+        },
+        "Ultra (>50L)": {
+          "precision": 0.8269,
+          "recall": 0.7288,
+          "f1": 0.7748,
+          "support": 59
+        }
+      },
+      "overfit_gap": 0.0507,
+      "is_overfitting": false,
+      "is_underfitting": false,
+      "tier_labels": [
+        "Budget (<5L)",
+        "Mid (5-10L)",
+        "Premium (10-20L)",
+        "Luxury (20-50L)",
+        "Ultra (>50L)"
+      ]
+    },
+    "LightGBM": {
+      "MAE": 186388.62,
+      "MSE": 125233848111.62,
+      "RMSE": 353883.95,
+      "R2": 0.9327,
+      "R2_train": 0.9812,
+      "MAPE": 19.73,
+      "CV_R2_mean": 0.9381,
+      "CV_R2_std": 0.0042,
+      "accuracy": 0.843,
+      "precision": 0.8112,
+      "recall": 0.7875,
+      "f1": 0.7969,
+      "confusion_matrix": [
+        [
+          1058,
+          88,
+          0,
+          0,
+          0
+        ],
+        [
+          76,
+          400,
+          31,
+          0,
+          0
+        ],
+        [
+          0,
+          38,
+          244,
+          90,
+          0
+        ],
+        [
+          1,
+          1,
+          44,
+          383,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          18,
+          41
+        ]
+      ],
+      "per_class": {
+        "Budget (<5L)": {
+          "precision": 0.9322,
+          "recall": 0.9232,
+          "f1": 0.9277,
+          "support": 1146
+        },
+        "Mid (5-10L)": {
+          "precision": 0.759,
+          "recall": 0.789,
+          "f1": 0.7737,
+          "support": 507
+        },
+        "Premium (10-20L)": {
+          "precision": 0.7649,
+          "recall": 0.6559,
+          "f1": 0.7062,
+          "support": 372
+        },
+        "Luxury (20-50L)": {
+          "precision": 0.78,
+          "recall": 0.8744,
+          "f1": 0.8245,
+          "support": 438
+        },
+        "Ultra (>50L)": {
+          "precision": 0.82,
+          "recall": 0.6949,
+          "f1": 0.7523,
+          "support": 59
+        }
+      },
+      "overfit_gap": 0.0485,
+      "is_overfitting": false,
+      "is_underfitting": false,
+      "tier_labels": [
+        "Budget (<5L)",
+        "Mid (5-10L)",
+        "Premium (10-20L)",
+        "Luxury (20-50L)",
+        "Ultra (>50L)"
+      ]
+    }
+  },
+  "needs_scaling": {
+    "Linear Regression": true,
+    "Random Forest": false,
+    "Gradient Boosting": false,
+    "XGBoost": false,
+    "LightGBM": false
+  }
+}

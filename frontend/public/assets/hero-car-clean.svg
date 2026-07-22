@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <filter id="carGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="gradBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ff9a5a"/>
+      <stop offset="55%"  stop-color="#e8703a"/>
+      <stop offset="100%" stop-color="#c14e1e" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="floorGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"  stop-color="#e8703a" stop-opacity="0.30"/>
+      <stop offset="55%" stop-color="#e8703a" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0F2A43" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridFloor" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#5b8fc7" stroke-opacity="0.20" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- ============ PERSPECTIVE GRID FLOOR ============ -->
+  <g opacity="0.55">
+    <path d="M 100 440 L 700 440 L 620 555 L 180 555 Z" fill="url(#gridFloor)"/>
+    <line x1="100" y1="440" x2="700" y2="440" stroke="#5b8fc7" stroke-opacity="0.45" stroke-width="0.8"/>
+    <line x1="115" y1="463" x2="685" y2="463" stroke="#5b8fc7" stroke-opacity="0.32" stroke-width="0.7"/>
+    <line x1="135" y1="488" x2="665" y2="488" stroke="#5b8fc7" stroke-opacity="0.24" stroke-width="0.6"/>
+    <line x1="155" y1="515" x2="645" y2="515" stroke="#5b8fc7" stroke-opacity="0.16" stroke-width="0.55"/>
+    <line x1="180" y1="555" x2="620" y2="555" stroke="#5b8fc7" stroke-opacity="0.10" stroke-width="0.5"/>
+    <line x1="100" y1="440" x2="180" y2="555" stroke="#5b8fc7" stroke-opacity="0.30" stroke-width="0.6"/>
+    <line x1="220" y1="440" x2="248" y2="555" stroke="#5b8fc7" stroke-opacity="0.22" stroke-width="0.6"/>
+    <line x1="340" y1="440" x2="338" y2="555" stroke="#5b8fc7" stroke-opacity="0.22" stroke-width="0.6"/>
+    <line x1="460" y1="440" x2="462" y2="555" stroke="#5b8fc7" stroke-opacity="0.22" stroke-width="0.6"/>
+    <line x1="580" y1="440" x2="552" y2="555" stroke="#5b8fc7" stroke-opacity="0.22" stroke-width="0.6"/>
+    <line x1="700" y1="440" x2="620" y2="555" stroke="#5b8fc7" stroke-opacity="0.30" stroke-width="0.6"/>
+  </g>
+
+  <!-- ============ FLOOR GLOW UNDER CAR ============ -->
+  <ellipse cx="400" cy="440" rx="280" ry="55" fill="url(#floorGlow)"/>
+
+  <!-- ============ CAR WIREFRAME ============ -->
+  <g filter="url(#carGlow)" stroke="url(#gradBody)" stroke-width="1.6" fill="none">
+    <path d="M 180 410 Q 200 425 240 425 L 560 425 Q 600 425 620 410" stroke-opacity="0.85"/>
+    <path d="M 175 380 Q 175 355 195 340 L 245 320 Q 275 295 320 285 L 470 282 Q 525 285 555 305 L 605 335 Q 625 350 625 380 L 625 410 L 175 410 Z" stroke-width="2"/>
+    <path d="M 245 320 Q 280 280 340 270 L 450 268 Q 510 272 545 295 L 580 320" stroke-width="1.6"/>
+    <path d="M 280 320 L 320 285 L 360 280" stroke-width="1.3"/>
+    <path d="M 360 280 L 360 320 L 280 320"/>
+    <path d="M 365 280 L 365 320 L 425 320 L 425 280 Z" stroke-width="1.3"/>
+    <path d="M 430 280 L 430 320 L 510 320 L 530 290 L 470 282 Z" stroke-width="1.3"/>
+    <path d="M 360 268 L 360 280 M 430 270 L 430 280 M 510 274 L 510 282" stroke-opacity="0.7"/>
+    <path d="M 180 380 L 240 360 L 285 345" stroke-width="1.3"/>
+    <path d="M 200 395 L 250 380" stroke-opacity="0.55"/>
+    <path d="M 555 305 L 600 335 L 620 365" stroke-width="1.3"/>
+    <path d="M 220 385 Q 350 372 480 372 Q 560 372 605 380" stroke-opacity="0.5" stroke-width="1"/>
+    <path d="M 200 410 Q 215 365 260 360 Q 305 360 320 410" stroke-opacity="0.7"/>
+    <path d="M 480 410 Q 495 360 540 360 Q 585 360 600 410" stroke-opacity="0.7"/>
+    <path d="M 175 392 L 165 395 L 165 410 L 175 410" stroke-width="1.1"/>
+    <path d="M 168 398 L 175 398 M 168 403 L 175 403" stroke-opacity="0.55"/>
+    <path d="M 180 370 L 200 365 L 215 372 L 210 380 L 185 382 Z" stroke-opacity="0.85" stroke-width="1.2"/>
+    <path d="M 620 365 L 615 380 L 605 380 L 605 365 Z" stroke-opacity="0.85" stroke-width="1.2"/>
+    <line x1="365" y1="320" x2="365" y2="408" stroke-opacity="0.4"/>
+    <line x1="425" y1="320" x2="425" y2="408" stroke-opacity="0.4"/>
+    <line x1="510" y1="318" x2="510" y2="408" stroke-opacity="0.4"/>
+    <line x1="385" y1="345" x2="405" y2="345" stroke-width="1.4"/>
+    <line x1="445" y1="345" x2="470" y2="345" stroke-width="1.4"/>
+    <path d="M 322 305 L 312 308 L 312 318 L 322 320" stroke-opacity="0.7"/>
+    <g>
+      <circle cx="260" cy="415" r="32" stroke-width="2"/>
+      <circle cx="260" cy="415" r="22" stroke-opacity="0.7" stroke-width="1.2"/>
+      <circle cx="260" cy="415" r="8"  stroke-opacity="0.85" stroke-width="1.2"/>
+      <line x1="260" y1="395" x2="260" y2="435" stroke-opacity="0.55"/>
+      <line x1="240" y1="415" x2="280" y2="415" stroke-opacity="0.55"/>
+      <line x1="246" y1="401" x2="274" y2="429" stroke-opacity="0.45"/>
+      <line x1="274" y1="401" x2="246" y2="429" stroke-opacity="0.45"/>
+    </g>
+    <g>
+      <circle cx="540" cy="415" r="32" stroke-width="2"/>
+      <circle cx="540" cy="415" r="22" stroke-opacity="0.7" stroke-width="1.2"/>
+      <circle cx="540" cy="415" r="8"  stroke-opacity="0.85" stroke-width="1.2"/>
+      <line x1="540" y1="395" x2="540" y2="435" stroke-opacity="0.55"/>
+      <line x1="520" y1="415" x2="560" y2="415" stroke-opacity="0.55"/>
+      <line x1="526" y1="401" x2="554" y2="429" stroke-opacity="0.45"/>
+      <line x1="554" y1="401" x2="526" y2="429" stroke-opacity="0.45"/>
+    </g>
+  </g>
+
+  <!-- ============ CORNER BRACKETS (HUD frame, subtle) ============ -->
+  <g stroke="#5b8fc7" stroke-width="1.2" stroke-opacity="0.40" fill="none">
+    <path d="M 40 50  L 40 80  M 40 50 L 70 50"/>
+    <path d="M 760 50 L 760 80 M 760 50 L 730 50"/>
+    <path d="M 40 550 L 40 520 M 40 550 L 70 550"/>
+    <path d="M 760 550 L 760 520 M 760 550 L 730 550"/>
+  </g>
+
+  <!-- Subtle scanlines -->
+  <g opacity="0.05">
+    <line x1="0" y1="180" x2="800" y2="180" stroke="#5b8fc7" stroke-width="0.4"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#5b8fc7" stroke-width="0.4"/>
+    <line x1="0" y1="420" x2="800" y2="420" stroke="#5b8fc7" stroke-width="0.4"/>
+  </g>
+</svg>
