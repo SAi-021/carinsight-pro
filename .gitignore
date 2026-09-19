@@ -6,3 +6,5 @@ node_modules/
 build/
 models/all_models.pkl
 models/test_split.pkl
+*.sql
+*.bak

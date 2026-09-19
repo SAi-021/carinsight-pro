@@ -1,5 +1,5 @@
 (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& g:\CarInsightPro\venv\Scripts\Activate.ps1)
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned .\venv\Scripts\Activate.ps1
+
 venv start
 
 cd backend
